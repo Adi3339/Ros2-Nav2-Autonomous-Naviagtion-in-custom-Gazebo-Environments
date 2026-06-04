@@ -3,15 +3,6 @@ This project demonstrates autonomous navigation of a TurtleBot3 Burger in custom
 
 The project was developed to gain practical experience with ROS2 middleware, Gazebo simulation, Nav2 integration, launch-file customization, TF2 debugging, and autonomous mobile robot navigation
 
-## Features
-- Autonomous navigation using ROS2 Nav2
-- LiDAR-based SLAM and map generation
-- AMCL localization on previously generated maps
-- Obstacle-aware path planning
-- Dynamic obstacle avoidance
-- Integration of custom Gazebo environments
-- Custom ROS2 launch-file architecture
-
 ## Demonstration
 Below are various links to simulation videos uploaded on YouTube
 - Localization and Autonomous Navigation <br>
@@ -22,8 +13,22 @@ Below are various links to simulation videos uploaded on YouTube
   [Autonomous Navigation when object moves in a circular path](https://youtu.be/lQ0bsI1Gmq4)
 
 A simulation GIF
-()
-  
+![Simulation GIF](Screenshots/simulation_demo_1.gif)
+
+## Features
+- Autonomous navigation using ROS2 Nav2
+- LiDAR-based SLAM and map generation
+- AMCL localization on previously generated maps
+- Obstacle-aware path planning
+- Dynamic obstacle avoidance
+- Integration of custom Gazebo environments
+- Custom ROS2 launch-file architecture
+## World & Mapping Showcase
+### Office Simulation Environment with robot spawned <br>
+![Office world](Screenshots/Office_with_object.png) <br>
+
+### SLAM Mapping Result <br>
+![SLAM Map](Screenshots/my_map_ver2.png)
 ## Software Stack
 - ROS2 Humble
 - Gazebo Classic
