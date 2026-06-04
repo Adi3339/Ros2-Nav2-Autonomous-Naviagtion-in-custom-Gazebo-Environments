@@ -26,7 +26,9 @@ The project was developed to gain practical experience with ROS2 middleware, Gaz
 Clone the repository into a ROS2 workspace:
 <pre>mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone https://github.com/Adi3339/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments.git </pre>
+git clone https://github.com/Adi3339/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments.git 
+cd ~/ros2_ws/src/my_project
+svn checkout https://github.com/leonhartyao/gazebo_models_worlds_collection/models </pre>
 
 Build the workspace:
 <pre>cd ~/ros2_ws
