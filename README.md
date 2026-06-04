@@ -13,9 +13,17 @@ The project was developed to gain practical experience with ROS2 middleware, Gaz
 - Custom ROS2 launch-file architecture
 
 ## Demonstration
-- Localization and Autonomous Navigation
-- Dynamic Obstacle Avoidance
+Below are various links to simulation videos uploaded on YouTube
+- Localization and Autonomous Navigation <br>
+[Autonomous Navigation without dynamic object](https://youtu.be/0sUM-3r76wAhttps://youtu.be/0sUM-3r76wA)
 
+- Dynamic Obstacle Avoidance <br>
+  [Autonomous Navigation when object moves in a straight path](https://youtu.be/yY6UaBc8PEA) <br>
+  [Autonomous Navigation when object moves in a circular path](https://youtu.be/lQ0bsI1Gmq4)
+
+A simulation GIF
+()
+  
 ## Software Stack
 - ROS2 Humble
 - Gazebo Classic
