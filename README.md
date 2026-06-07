@@ -44,6 +44,7 @@ git clone https://github.com/Adi3339/Ros2-Nav2-Autonomous-Naviagtion-in-custom-G
 We'd also need Gazebo model assets for the custom office world
 <pre>cd ~/ros2_ws/src/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments/my_project
 git clone --filter=blob:none --sparse https://github.com/leonhartyao/gazebo_models_worlds_collection.git
+cd gazebo_models_worlds_collection
 git sparse-checkout set models</pre>
 
 Build the workspace:
@@ -54,7 +55,8 @@ source install/setup.bash</pre>
 
 ## Running the Project
 1. Launch Gazebo Environment with custom office world
-<pre>export GAZEBO_MODEL_PATH=$(pwd)/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments/my_project/gazebo_models_worlds_collection/models:$GAZEBO_MODEL_PATH
+<pre>cd ~/ros2_ws/src/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments
+export GAZEBO_MODEL_PATH=$(pwd)/my_project/gazebo_models_worlds_collection/models:$GAZEBO_MODEL_PATH
 export TURTLEBOT3_MODEL=burger
 ros2 launch my_project my_world.launch.py</pre>
 
