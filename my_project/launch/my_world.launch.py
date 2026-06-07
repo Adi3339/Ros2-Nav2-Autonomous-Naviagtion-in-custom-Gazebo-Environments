@@ -18,7 +18,7 @@ def generate_launch_description():
 
     world_arg = DeclareLaunchArgument(
         'world',
-        default_value=os.path.join(pkg_my_project, 'worlds', 'office_small.world'),
+        default_value=os.path.join(pkg_my_project, 'worlds', 'office_small_4.world'),
         description='Full path to world file'
     )
 
