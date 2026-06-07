@@ -39,9 +39,12 @@ A simulation GIF
 Clone the repository into a ROS2 workspace:
 <pre>mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone https://github.com/Adi3339/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments.git 
-cd ~/ros2_ws/src/my_project
-svn checkout https://github.com/leonhartyao/gazebo_models_worlds_collection/models </pre>
+git clone https://github.com/Adi3339/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments.git</pre> 
+
+We'd also need Gazebo model assets for the custom office world
+<pre>cd ~/ros2_ws/src/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments/my_project
+git clone --filter=blob:none --sparse https://github.com/leonhartyao/gazebo_models_worlds_collection.git
+git sparse-checkout set models</pre>
 
 Build the workspace:
 <pre>cd ~/ros2_ws
@@ -51,25 +54,19 @@ source install/setup.bash</pre>
 
 ## Running the Project
 1. Launch Gazebo Environment with custom office world
-<pre>export GAZEBO_MODEL_PATH=~/ros2_ws/src/my_project/gazebo_models_worlds_collection/models:$GAZEBO_MODEL_PATH
+<pre>export GAZEBO_MODEL_PATH=$(pwd)/Ros2-Nav2-Autonomous-Naviagtion-in-custom-Gazebo-Environments/my_project/gazebo_models_worlds_collection/models:$GAZEBO_MODEL_PATH
 export TURTLEBOT3_MODEL=burger
-ros2 launch my_project my_world.launch.py \
-world:=/ros2_ws/src/my_project/worlds/office_small_4.world</pre>
+ros2 launch my_project my_world.launch.py</pre>
 
 2. Run the localization node: in a new terminal launch AMCL with a saved map
-<pre>ros2 launch nav2_bringup localization_launch.py \
-map:=/ros2_ws/src/my_project/maps/my_map_ver2.yaml \
-use_sim_time:=true</pre>
+<pre>ros2 launch my_project my_localization.launch.py</pre>
 
 3. Launch Rviz2 in a new terminal and set initial pose
 <pre>rviz2</pre>
 \* Note: Set durability policy to 'transient local' instead of 'volatile' to avoid any visualization issues
 
 4. Autonomous Navigation: in a new terminal launch navigation node
-<pre>ros2 launch nav2_bringup navigation_launch.py \
-params_file:=~/ros2_ws/src/my_project/params/my_params.yaml \
-use_sim_time:=true \
-autostart:=true</pre>
+<pre>ros2 launch my_project my_navigation.launch.py</pre>
 
 5. Dynamic Obstacle: in a new terminal run the obstacle mover node
 <pre>source install/setup.bash
