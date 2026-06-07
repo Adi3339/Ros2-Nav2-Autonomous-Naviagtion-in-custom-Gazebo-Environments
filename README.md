@@ -62,6 +62,9 @@ ros2 launch my_project my_world.launch.py</pre>
 
 2. Run the localization node: in a new terminal launch AMCL with a saved map
 <pre>ros2 launch my_project my_localization.launch.py</pre>
+\* Note: Whenever you open a new terminal source the workspace by entering:
+<pre>cd ~/ros2_ws
+source install/setup.bash</pre>
 
 3. Launch Rviz2 in a new terminal and set initial pose
 <pre>rviz2</pre>
